@@ -1,15 +1,30 @@
 import string 
 import random 
 
-tamano =  int(input("Introduce el tamano de la contraseña: "))
-caracteres = string.ascii_letters + string.digits + string.punctuation
+def generar_contrasena(tamano):
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    return "".join(random.choice(caracteres)for i in range(tamano))
 
-contrasena = ("".join(random.choice(caracteres)for i in range(tamano))) 
 
-if input("deseas ver tu contrasena?") == "si":
-	print("tu contrasena es: " + contrasena)
-else:
-	input("deseas ver tu contrasena?") == "no"
-	print("esta bien")
+def main():
+    try:
+        tamano = int(input("ingresa el tamano de la contrasena: "))
+        if tamano <= 0:
+              print("el tamano debe ser mayor a 0 si o si")
+              return
+        
+        contrasena = generar_contrasena(tamano)
 
+
+        if input("deseas ver tu contrasena? (si/no):").strip().lower() == "si":
+            print("tu contrasena es: " + contrasena)
+        else:
+         print("esta bien")
+              
+    
+    except ValueError:
+          print("solo pudes responder si o no")
+
+if __name__ == "__main__":
+      main()
 
