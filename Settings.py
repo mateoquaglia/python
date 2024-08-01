@@ -113,3 +113,4 @@ class Settings(object):
             # Coloca as informações no arquivo e o fecha
             file.write(dumps(data, indent=2))
             file.close()
+ 
