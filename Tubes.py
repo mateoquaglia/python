@@ -5,7 +5,7 @@ from Background import Background
 from Bird import Bird
 from PIL.Image import open as openImage
 from PIL.ImageTk import PhotoImage
-
+ 
 
 class Tubes(Thread):
     """
