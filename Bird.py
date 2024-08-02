@@ -30,8 +30,7 @@ class Bird(Thread):
         descend_speed=5
     ):
 
-        # Verifica se "background" é uma instância de Background e se o "gamerover_method" é chamável
-
+        # Comprueba si "background" es una instancia de Fondo y si "gamerover_method" es invocable
         if not isinstance(background, Background):
             raise TypeError(
                 "The background argument must be an instance of Background."
