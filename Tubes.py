@@ -172,7 +172,7 @@ class Tubes(Thread):
         # Define a posição Y do corpo do tubo de baixo
         y = (self.__height - (height // 2)) + self.__imageHeight // 2
 
-        # Cria e adiciona à lista do corpo do tubo de baixo, o corpo do tubo
+     # Crear y agregar a la lista del cuerpo de tubo de bajo, el cuerpo de tubo
         tube2.append(
             self.__background.create_image(
                 width, y, image=self.__background.tubeImages[0][-1][1]
